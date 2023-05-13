@@ -9,32 +9,53 @@
     <link rel="stylesheet" href="css\style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 </head>
 
 <body class="contenedor_grid">
     <header class="header">
-        <p>Calculadora 3D</p>
+        <h1>Calculadora 3D</h1>
     </header>
 
     <main class="main">
         <form class="cuadro">
+
+            <div class="cuadro_filamento">
+                <h1>Filamento</h1>
+            </div>
             <div class="cuadro_primera">
-                <p>Filamento (gr.)</p>
+                <p>Filamento (gr.)</p> 
                 <input type="number" id="filamento">
             </div>
             <div class="cuadro_segunda">
-                <p>Precio de Referencia (1kg.)</p>
+                <p>Precio del Carrete</p>
                 <input type="number" id="filamento_referencia">
             </div>
+            <div class="cuadro_peso">
+                <p>Peso del Carrete (gr.)</p>
+                <input type="number" id="filamento_peso">
+            </div>
+
+
+
+            <div class="cuadro_electricidad">
+                <h1>Electricidad</h1>
+            </div>
             <div class="cuadro_tercera">
-                <p>Tiempo</p>
+                <p>Tiempo (hs)</p>
                 <input type="number" id="tiempo">
             </div>
             <div class="cuadro_cuarta">
                 <p>Precio Kw/h</p>
                 <input type="number" id="kw">
+            </div>
+            <!--
+                Agregar para poner el consumo de la impresora
+            -->
+
+            <div class="cuadro_impuesto_ganancia">
+                <h1>Impuestos y Ganancia</h1>
             </div>
             <div class="cuadro_quinta">
                 <p>IVA (%)</p>
@@ -44,9 +65,20 @@
                 <p>Margen de Ganancia (%)</p>
                 <input type="number" id="ganancia">
             </div>
+
             <div class="cuadro_septima">
                 <button id="calcular_boton" type="button">Calcular</button>
             </div>
+
+            <!--
+                PosProcesado
+                Tiempo y Costo
+            -->
+
+            <!--
+                Costos extras
+            -->
+
             <div class="cuadro_octava">
                 <p>Resultado</p>
                 <p id="resultado"></p>

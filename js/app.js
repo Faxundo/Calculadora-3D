@@ -9,15 +9,16 @@ boton.addEventListener('click', function () {
     let kw = document.getElementById("kw").value;
     let iva = document.getElementById("iva").value;
     let ganancia = document.getElementById("ganancia").value;
+    let filamento_peso = document.getElementById("filamento_peso").value;
     
-    let resultado = calcular(filamento, filamento_referencia, tiempo, kw, iva, ganancia);
+    let resultado = calcular(filamento, filamento_referencia, tiempo, kw, iva, ganancia, filamento_peso);
 
     let cuadro_resultado = document.getElementById("resultado");
     cuadro_resultado.textContent = "$ " + resultado;
 });
 
-function calcular(filamento, filamento_referencia, tiempo, kw, iva, ganancia) {
-    let base_material = (((filamento_referencia/1000)*filamento) + (tiempo*kw));
+function calcular(filamento, filamento_referencia, tiempo, kw, iva, ganancia, filamento_peso) {
+    let base_material = (((filamento_referencia/filamento_peso)*filamento) + (tiempo*kw));
     console.log(base_material);
     return (base_material * ((iva/100)+1)) * (ganancia/100);
 }

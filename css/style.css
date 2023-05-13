@@ -47,10 +47,14 @@ main {
     min-height: 100%;
     display: grid;
     grid-template-areas:
+        "cuadro_filamento"
         "cuadro_primera"
         "cuadro_segunda"
+        "cuadro_peso"
+        "cuadro_electricidad"
         "cuadro_tercera"
         "cuadro_cuarta"
+        "cuadro_impuesto_ganancia"
         "cuadro_quinta"
         "cuadro_sexta"
         "cuadro_septima"
@@ -62,10 +66,10 @@ input {
     height: 25%;
     width: 30%;
     border: none;
+    border-radius: .3rem;
 }
 
 button {
-
     height: 3rem;
     width: 8rem;
     font-size: 1.8rem;
@@ -84,6 +88,11 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 
+
+.cuadro_filamento {
+    grid-area: cuadro_filamento;
+}
+
 .cuadro_primera {
     grid-area: cuadro_primera;
 }
@@ -92,12 +101,26 @@ input[type=number]::-webkit-outer-spin-button {
     grid-area: cuadro_segunda;
 }
 
+.cuadro_peso {
+    grid-area: cuadro_peso;
+}
+
+.cuadro_electricidad {
+    grid-area: cuadro_electricidad;
+    border-top: 0.2rem solid black;
+}
+
 .cuadro_tercera {
     grid-area: cuadro_tercera;
 }
 
 .cuadro_cuarta {
     grid-area: cuadro_cuarta;
+}
+
+.cuadro_impuesto_ganancia {
+    grid-area: cuadro_impuesto_ganancia;
+    border-top: 0.2rem solid black;
 }
 
 .cuadro_quinta {
@@ -113,13 +136,14 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .cuadro_octava {
+    border-top: 0.2rem solid black;
     grid-area: cuadro_octava;
 }
 
 #resultado {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 }
 
 footer {
@@ -136,41 +160,54 @@ footer {
 
     .contenedor_grid {
         grid-template:
-            "header" 10% "main" 70%
+            "header" 10% 
+            "main" 80%
             "footer" 20%;
     }
 
     .cuadro {
         grid-template:
-            "cuadro_primera cuadro_segunda" 25%
-            "cuadro_tercera cuadro_cuarta" 25%
-            "cuadro_quinta cuadro_sexta" 25%
-            "cuadro_septima cuadro_octava" 25% /
-            50% auto;
+            "cuadro_filamento" 5%
+            "cuadro_primera" 10%
+            "cuadro_segunda" 10%
+            "cuadro_peso" 10%
+            "cuadro_electricidad" 5%
+            "cuadro_tercera" 10%
+            "cuadro_cuarta" 10%
+            "cuadro_impuesto_ganancia" 5%
+            "cuadro_quinta" 10%
+            "cuadro_sexta" 10%
+            "cuadro_septima" 10%
+            "cuadro_octava" 5%;
         width: 80%;
         margin-left: 10%;
     }
 
+    .cuadro h1 {
+        font-size: 2.2rem;
+        margin-bottom: 10%;
+    }
+    
+    .cuadro_electricidad {
+        padding-top: .5%;
+    }
+
+    .cuadro_impuesto_ganancia {
+        padding-top: .5%;
+    }
+
+    .cuadro_octava {
+        padding-top: .5%;
+    }
+
     header {
-        font-size: 2.5rem;
-        margin-top: .5%;
-    }
-
-    button {
-        margin-top: 5%;
-    }
-
-    .cuadro_primera {
-        margin-top: 2%;
-    }
-
-    .cuadro_segunda {
-        margin-top: 2%;
+        font-size: 1.4rem;
+        margin-top: 3%;
     }
 
     #resultado {
-        margin-top: 1%;
-        height: 55%;
+        margin-top: .5%;
+        height: 4rem;
         width: 50%;
         margin-left: 25%;
         background-color: white;
