@@ -162,7 +162,7 @@ footer {
         grid-template:
             "header" 10% 
             "main" 80%
-            "footer" 20%;
+            "footer" 10%;
     }
 
     .cuadro {
